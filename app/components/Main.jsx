@@ -190,18 +190,17 @@ export const Main = ({ isActive, setisActive }) => {
       <div className="flex w-full justify-center py-8">
         <Button text="Show More" link="/" />
       </div>
-      <div className="flex w-full flex-col items-center justify-center gap-4 pb-20 pt-12 text-center">
+      <div className="flex w-full flex-col items-center justify-center gap-4 pb-20 pt-12 text-center lg:gap-7">
         <h2 className="font-mono text-sm font-thin tracking-wider text-[#64ffda]">
           What's Next?
         </h2>
-        <h2 className="text-4xl font-bold text-[#ccd6f6]">Get In Touch</h2>
-        <p className="text-sm text-[#a8b2d1] sm:mx-auto sm:max-w-md sm:text-base">
+        <h2 className="text-4xl font-bold text-[#ccd6f6] lg:text-6xl">
+          Get In Touch
+        </h2>
+        <p className="text-sm text-[#a8b2d1] sm:mx-auto sm:max-w-md sm:text-base lg:max-w-xl">
           Although I’m not currently looking for any new opportunities, my inbox
-          is always open.
-        </p>
-        <p className="mb-8 text-sm text-[#a8b2d1] sm:mx-auto sm:max-w-md sm:text-base">
-          Whether you have a question or just want to say hi, I’ll try my best
-          to get back to you!
+          is always open. Whether you have a question or just want to say hi,
+          I’ll try my best to get back to you!
         </p>
 
         <button className="relative left-0 top-0 z-10 rounded border border-[#64ffda] bg-[#0D192D] px-5 py-4 font-mono text-sm text-[#64ffda] transition duration-300 ease-in-out hover:-translate-x-[1px] hover:-translate-y-[1px] hover:border-b-4 hover:border-r-4">
