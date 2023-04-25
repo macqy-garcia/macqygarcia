@@ -24,7 +24,7 @@ export const Tabs = () => {
     },
   ];
   return (
-    <ul className="my-7 flex w-80 overflow-x-scroll text-center font-mono text-xs font-medium text-gray-500 ">
+    <ul className="mb-7 flex w-80 overflow-x-scroll text-center font-mono text-xs font-medium text-gray-500 ">
       {jobs.map((job, index) => (
         <NavLink
           key={index}

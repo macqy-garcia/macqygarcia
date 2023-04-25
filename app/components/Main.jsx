@@ -147,7 +147,7 @@ export const Main = ({ isActive, setisActive }) => {
         title="Some Things I’ve Built"
         before="before:content-['03.']"
       />
-      <section className="flex flex-col gap-7 py-7">
+      <section className="flex flex-col gap-7 pb-7">
         <Card />
         <Card />
         <Card />
