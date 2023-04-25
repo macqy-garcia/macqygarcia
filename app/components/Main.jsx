@@ -8,29 +8,32 @@ import { Button } from "./Button";
 import { Header } from "./Header";
 import { Socials } from "./Socials";
 import { Sidebar } from "./Sidebar";
+import { Navbar } from "./Navbar";
+import { Timeline } from "./Timeline";
 
 export const Main = ({ isActive, setisActive }) => {
   return (
     <main className="flex flex-col items-start space-y-7 bg-[#0D192D] px-7 sm:px-14">
       <Sidebar isActive={isActive} setisActive={setisActive} />
-      <section className="flex h-screen flex-col items-start justify-center gap-10">
-        <di className="space-y-3">
+      <Navbar />
+      <section className="flex h-screen flex-col items-start justify-center gap-10 lg:w-full lg:items-center">
+        <div className="space-y-3">
           <h1 className="font-mono text-sm text-[#64ffda]">Hi, my name is</h1>
           <Header text="Macqy Garcia." variant="primary" />
           <Header text="I build things for the web." variant="secondary" />
-        </di>
-        <p className="text-sm tracking-wide text-[#8892b0] sm:text-base sm:leading-relaxed md:max-w-xl">
-          I’m a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I’m focused on
-          building accessible, human-centered products at{" "}
-          <NavLink to="https://joyride.com.ph/" className="text-[#64ffda]">
-            JoyRide PH
-          </NavLink>
-        </p>
-        <Button text="Check out my course!" link="/" />
+          <p className="text-sm tracking-wide text-[#8892b0] sm:text-base sm:leading-relaxed md:max-w-xl lg:py-7">
+            I’m a software engineer specializing in building (and occasionally
+            designing) exceptional digital experiences. Currently, I’m focused
+            on building accessible, human-centered products at{" "}
+            <NavLink to="https://joyride.com.ph/" className="text-[#64ffda]">
+              JoyRide PH
+            </NavLink>
+          </p>
+          <Button text="Check out my course!" link="/" />
+        </div>
       </section>
       {/* ABOUT */}
-      <section className="w-full lg:flex lg:gap-10">
+      <section className="w-full lg:mx-auto lg:flex lg:max-w-4xl lg:gap-10">
         <div className="lg:max-w-md">
           <SectionHeader title="About Me" before="before:content-['01.']" />
           <div>
@@ -101,57 +104,68 @@ export const Main = ({ isActive, setisActive }) => {
         </div>
       </section>
       {/* WORKED */}
-      <section className="py-24">
+      <section className="py-24 lg:mx-auto">
         <SectionHeader
           title="Where I've Worked"
           before="before:content-['02.']"
         />
         <Tabs />
-        <div className="space-y-1 pt-2">
-          <h3>
-            <span className="text-xl text-[#ccd6f6]">Software Engineer</span>
-            <span className="mx-1 text-[#64ffda]">@</span>
-            <NavLink
-              to="https://joyride.com.ph/"
-              className="mx-1 text-xl text-[#64ffda]"
-            >
-              JoyRide PH
-            </NavLink>
-          </h3>
-          <p className="font-mono text-xs text-[#8892b0]">May 2022 - Present</p>
-        </div>
-        <ul className="flex flex-col gap-4 p-5 text-sm font-light">
-          <ListItem
-            text="Deliver high-quality, robust production code for a diverse array of
+        <div className="lg:mt-7 lg:flex lg:items-start lg:justify-between">
+          <Timeline />
+          <div>
+            <div className="space-y-1 pt-2">
+              <h3>
+                <span className="text-xl text-[#ccd6f6]">
+                  Software Engineer
+                </span>
+                <span className="mx-1 text-[#64ffda]">@</span>
+                <NavLink
+                  to="https://joyride.com.ph/"
+                  className="mx-1 text-xl text-[#64ffda]"
+                >
+                  JoyRide PH
+                </NavLink>
+              </h3>
+              <p className="font-mono text-xs text-[#8892b0]">
+                May 2022 - Present
+              </p>
+            </div>
+            <ul className="flex flex-col gap-4 p-5 text-sm font-light">
+              <ListItem
+                text="Deliver high-quality, robust production code for a diverse array of
           projects for company and customer use such as inventory and selling system,
           mobile app using react native and an admin dashboard for the app"
-          />
-          <ListItem
-            text="Work alongside creative directors to lead the research, development,
+              />
+              <ListItem
+                text="Work alongside creative directors to lead the research, development,
           and architecture of technical solutions to fulfill business
           requirements"
-          />
-          <ListItem
-            text="Collaborate with designers, project managers, and other engineers to
+              />
+              <ListItem
+                text="Collaborate with designers, project managers, and other engineers to
           transform creative concepts into production realities for clients and
           stakeholders"
-          />
-          <ListItem
-            text="Provide leadership within engineering department through close
+              />
+              <ListItem
+                text="Provide leadership within engineering department through close
           collaboration, knowledge shares, and mentorship"
-          />
-        </ul>
+              />
+            </ul>
+          </div>
+        </div>
       </section>
       {/* BUILT */}
-      <SectionHeader
-        title="Some Things I’ve Built"
-        before="before:content-['03.']"
-      />
-      <section className="flex flex-col gap-7 pb-7">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <section className="lg:mx-auto lg:max-w-5xl">
+        <SectionHeader
+          title="Some Things I’ve Built"
+          before="before:content-['03.']"
+        />
+        <section className="flex flex-col gap-7 pb-7 lg:mt-7 lg:grid lg:grid-cols-2">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </section>
       </section>
       <div className="flex w-full flex-col items-center justify-center gap-3 py-10">
         <h2 className="text-center text-xl font-semibold text-[#ccd6f6]">
@@ -164,7 +178,9 @@ export const Main = ({ isActive, setisActive }) => {
           view the archive
         </NavLink>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <SmallCard />
+        <SmallCard />
         <SmallCard />
         <SmallCard />
         <SmallCard />
@@ -194,7 +210,7 @@ export const Main = ({ isActive, setisActive }) => {
       <footer className="flex w-full flex-col justify-center gap-5 pb-10 pt-16">
         <Socials />
         <p className="text-center font-mono text-xs text-[#a8b2d1]">
-          Designed & Built by Macqy Garcia
+          Designed By Brittany Chiang & Built by Macqy Garcia
         </p>
       </footer>
     </main>

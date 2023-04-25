@@ -35,7 +35,7 @@ export const Sidebar = ({ isActive, setisActive }) => {
   ];
 
   return (
-    <nav className="fixed left-0 top-0 z-20 flex w-full items-center justify-between bg-[#0D192D] p-7 transition duration-500 ease-in-out">
+    <nav className="fixed left-0 top-0 z-20 flex w-full items-center justify-between bg-[#0D192D] p-7 transition duration-500 ease-in-out lg:hidden">
       <svg
         width="50"
         height="50"

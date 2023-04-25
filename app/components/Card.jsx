@@ -2,7 +2,7 @@ import { NavLink } from "@remix-run/react";
 
 export const Card = () => {
   return (
-    <div className="flex flex-col gap-7 bg-[#0C1F34] px-7 py-8 shadow-sm">
+    <div className="flex w-full flex-col gap-7 bg-[#0C1F34] px-7 py-8 shadow-sm">
       <div>
         <p className="mb-2 font-mono text-xs font-thin tracking-wide text-[#64ffda]">
           Featured Project
@@ -11,7 +11,7 @@ export const Card = () => {
           <NavLink to="/">Hyperia Theme</NavLink>
         </h3>
       </div>
-      <p className="text-sm text-[#a8b2d1]">
+      <p className="text-sm text-[#a8b2d1] lg:max-w-lg">
         A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
         more. Available on Visual Studio Marketplace, Package Control, Atom
         Package Manager, and npm.

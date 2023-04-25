@@ -1,6 +1,6 @@
 import { NavLink } from "@remix-run/react";
 
-export const Tabs = () => {
+export const Timeline = () => {
   const jobs = [
     {
       company: "JoyRide PH",
@@ -24,21 +24,22 @@ export const Tabs = () => {
     },
   ];
   return (
-    <ul className="mb-7 flex w-80 overflow-x-scroll text-center font-mono text-xs font-medium text-gray-500 lg:hidden ">
+    <ul className="mb-7 hidden w-44 font-mono text-xs font-medium text-gray-500 lg:relative lg:flex lg:flex-col lg:gap-3">
       {jobs.map((job, index) => (
         <NavLink
           key={index}
           to={job.url}
           className={({ isActive }) =>
             isActive
-              ? "active inline-block whitespace-nowrap rounded-t border-b-2 border-[#64ffda]  p-4 text-[#64ffda]"
-              : "inline-block whitespace-nowrap rounded-t p-4 hover:text-[#64ffda]" +
+              ? "active inline-block whitespace-nowrap border-l-2 border-[#64ffda] px-6 py-3 text-[#64ffda]"
+              : "inline-block whitespace-nowrap px-6 py-3 hover:text-[#64ffda]" +
                 " hover:bg-blue-900/10"
           }
         >
           {job.company}
         </NavLink>
       ))}
+      <div className="absolute left-0 top-0 h-full w-[2px] bg-slate-500" />
     </ul>
   );
 };
