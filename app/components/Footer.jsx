@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <>
-      <div className="left-0-10 fixed bottom-0 flex flex-col items-center gap-7">
+      <div className="fixed bottom-0 left-10 hidden flex-col items-center gap-7 lg:flex">
         {/* Github */}
         <svg
           width="20"
@@ -156,7 +156,7 @@ export const Footer = () => {
         </svg>
         <div className="h-32 w-[1px] bg-[#a8b2d1]" />
       </div>
-      <div className="group">
+      <div className="group hidden lg:block">
         <p
           className="fixed bottom-56 right-12 h-32 cursor-pointer font-mono text-xs tracking-widest text-[#a8b2d1] group-hover:-translate-y-1 group-hover:text-[#64ffda] group-hover:transition"
           style={{ writingMode: "vertical-rl" }}

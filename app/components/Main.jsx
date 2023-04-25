@@ -11,6 +11,7 @@ import { Sidebar } from "./Sidebar";
 import { Navbar } from "./Navbar";
 import { Timeline } from "./Timeline";
 import { Footer } from "./Footer";
+import { personalProjects, projects } from "../data";
 
 export const Main = ({ isActive, setisActive }) => {
   return (
@@ -162,10 +163,9 @@ export const Main = ({ isActive, setisActive }) => {
           before="before:content-['03.']"
         />
         <section className="flex flex-col gap-7 pb-7 lg:mt-7 lg:grid lg:grid-cols-2">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {personalProjects.map((project, index) => (
+            <Card key={index} project={project} />
+          ))}
         </section>
       </section>
       <div className="flex w-full flex-col items-center justify-center gap-3 py-10">
@@ -180,12 +180,9 @@ export const Main = ({ isActive, setisActive }) => {
         </NavLink>
       </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:mx-auto lg:max-w-3xl xl:max-w-5xl xl:grid-cols-3">
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
-        <SmallCard />
+        {projects.map((project, index) => (
+          <SmallCard key={index} project={project} />
+        ))}
       </div>
       <div className="flex w-full justify-center py-8">
         <Button text="Show More" link="/" />
@@ -210,7 +207,7 @@ export const Main = ({ isActive, setisActive }) => {
       <footer className="flex w-full flex-col justify-center gap-5 pb-10 pt-16">
         <Footer />
         <p className="text-center font-mono text-xs text-[#a8b2d1]">
-          Designed By Brittany Chiang & Built by Macqy Garcia
+          Designed & Built by Macqy Garcia
         </p>
         <Socials />
       </footer>
