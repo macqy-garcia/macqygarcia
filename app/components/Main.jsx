@@ -179,7 +179,7 @@ export const Main = ({ isActive, setisActive }) => {
           view the archive
         </NavLink>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:mx-auto lg:max-w-7xl lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:mx-auto lg:max-w-3xl xl:max-w-5xl xl:grid-cols-3">
         <SmallCard />
         <SmallCard />
         <SmallCard />
