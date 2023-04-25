@@ -55,7 +55,7 @@ export const Navbar = ({ isActive, setisActive }) => {
         />
       </svg>
 
-      <ul className="flex items-center justify-evenly gap-7 shadow-lg">
+      <ul className="flex items-center justify-evenly gap-7">
         {links.map((link, index) => (
           <li
             key={link.text}

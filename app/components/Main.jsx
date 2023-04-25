@@ -213,8 +213,8 @@ export const Main = ({ isActive, setisActive }) => {
         <p className="text-center font-mono text-xs text-[#a8b2d1]">
           Designed By Brittany Chiang & Built by Macqy Garcia
         </p>
+        <Socials />
       </footer>
-      <Socials />
     </main>
   );
 };
