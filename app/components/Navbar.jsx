@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useEffect, useCallback } from "react";
 import { NavLink } from "@remix-run/react";
 
 export const Navbar = ({ isActive, setisActive }) => {
@@ -72,9 +72,13 @@ export const Navbar = ({ isActive, setisActive }) => {
             </span>
           </li>
         ))}
-        <button className="rounded border border-[#64ffda] bg-[#0D192D] px-10 py-4 font-mono text-sm text-[#64ffda] transition duration-300 ease-in-out hover:-translate-x-[1px] hover:-translate-y-[1px] hover:border-b-4 hover:border-r-4 lg:px-4 lg:py-2">
-          <NavLink to="/">Resume</NavLink>
-        </button>
+        <a
+          className="rounded border border-[#64ffda] bg-[#0D192D] px-10 py-4 font-mono text-sm text-[#64ffda] transition duration-300 ease-in-out hover:-translate-x-[1px] hover:-translate-y-[1px] hover:border-b-4 hover:border-r-4 lg:px-4 lg:py-2"
+          href="https://drive.google.com/uc?export=download&id=16teuKsMcmUX23Oe7Xcjc3Xe9AvtFSEJH"
+          target="_blank"
+        >
+          Resume
+        </a>
       </ul>
     </nav>
   );
