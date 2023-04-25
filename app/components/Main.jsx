@@ -111,7 +111,7 @@ export const Main = ({ isActive, setisActive }) => {
           before="before:content-['02.']"
         />
         <Tabs />
-        <div className="lg:mt-7 lg:flex lg:items-start lg:justify-between">
+        <div className="lg:mt-7 lg:flex lg:items-start lg:justify-between lg:gap-5">
           <Timeline />
           <div>
             <div className="space-y-1 pt-2">

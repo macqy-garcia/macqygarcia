@@ -31,7 +31,7 @@ export const Timeline = () => {
           to={job.url}
           className={({ isActive }) =>
             isActive
-              ? "active inline-block whitespace-nowrap border-l-2 border-[#64ffda] px-6 py-3 text-[#64ffda]"
+              ? "active z-10 inline-block whitespace-nowrap border-l-2 border-[#64ffda] px-6 py-3 text-[#64ffda]"
               : "inline-block whitespace-nowrap px-6 py-3 hover:text-[#64ffda]" +
                 " hover:bg-blue-900/10"
           }
@@ -39,7 +39,6 @@ export const Timeline = () => {
           {job.company}
         </NavLink>
       ))}
-      <div className="absolute left-0 top-0 h-full w-[2px] bg-slate-500" />
     </ul>
   );
 };
