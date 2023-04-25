@@ -30,64 +30,76 @@ export const Main = ({ isActive, setisActive }) => {
         <Button text="Check out my course!" link="/" />
       </section>
       {/* ABOUT */}
-      <SectionHeader title="About Me" before="before:content-['01.']" />
-      <div>
-        <Base
-          variant="primary"
-          text="Hello! My name is Macqy and I enjoy creating things that live on the
+      <section className="w-full lg:flex lg:gap-10">
+        <div className="lg:max-w-md">
+          <SectionHeader title="About Me" before="before:content-['01.']" />
+          <div>
+            <Base
+              variant="primary"
+              text="Hello! My name is Macqy and I enjoy creating things that live on the
         internet. My interest in web development started back in 2017 when I
         decided to create a system that will handle documents for my company — turns out hacking together
         a custom reblog button taught me a lot about HTML & CSS!"
-        />
-        <br />
-        <br />
-        <Base
-          variant="primary"
-          text="Fast-forward to today, and I’ve had the privilege of working at a"
-        />
-        <Base variant="secondary" text="fintech company," />
-        <Base variant="secondary" text="a start-up," />
-        <Base variant="secondary" text="a huge corporation," />
-        <Base variant="primary" text="and" />
-        <Base variant="secondary" text="a leading homegrown superapp." />
-        <Base
-          variant="primary"
-          text="My main focus these days is
+            />
+            <br />
+            <br />
+            <Base
+              variant="primary"
+              text="Fast-forward to today, and I’ve had the privilege of working at a"
+            />
+            <Base variant="secondary" text="fintech company," />
+            <Base variant="secondary" text="a start-up," />
+            <Base variant="secondary" text="a huge corporation," />
+            <Base variant="primary" text="and" />
+            <Base variant="secondary" text="a leading homegrown superapp." />
+            <Base
+              variant="primary"
+              text="My main focus these days is
         building accessible, inclusive products and digital experiences at"
-        />
-        <Base variant="secondary" text="JoyRide PH" />
-        <Base variant="primary" text="for a variety of clients." />
-        <Base variant="primary" text="I also recently" />
-        <Base variant="secondary" text="launched a course" />
-        <Base
-          variant="primary"
-          text="that covers everything you need to build an Ecommerce app using Remix & PlanetScale as its database."
-        />
-      </div>
-      <Base
-        variant="primary"
-        text="Here are a few technologies I’ve been working with recently:"
-      />
-      <ul className="grid grid-cols-2 gap-2">
-        <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
-          JavaScript (ES6+)
-        </li>
-        <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
-          Remix
-        </li>
-        <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
-          Node.js
-        </li>
-        <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
-          TypeScript
-        </li>
-        <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
-          Express
-        </li>
-        <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
-          Prisma
-        </li>
-      </ul>
+            />
+            <Base variant="secondary" text="JoyRide PH" />
+            <Base variant="primary" text="for a variety of clients." />
+            <br />
+            <br />
+            <Base variant="primary" text="I also recently" />
+            <Base variant="secondary" text="launched a course" />
+            <Base
+              variant="primary"
+              text="that covers everything you need to build an Ecommerce app using Remix & PlanetScale as its database."
+            />
+          </div>
+          <br />
+          <Base
+            variant="primary"
+            text="Here are a few technologies I’ve been working with recently:"
+          />
+          <ul className="grid grid-cols-2 gap-2 py-5">
+            <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
+              JavaScript (ES6+)
+            </li>
+            <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
+              Remix
+            </li>
+            <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
+              Node.js
+            </li>
+            <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
+              TypeScript
+            </li>
+            <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
+              Express
+            </li>
+            <li className="font-mono text-xs font-thin tracking-wide text-[#8892b0] before:mr-2 before:text-sm before:text-[#64ffda] before:content-['▹']">
+              Prisma
+            </li>
+          </ul>
+        </div>
+        {/* Profile Photo */}
+        <div className="group relative mx-auto mt-10 h-56 w-56 cursor-pointer lg:mt-24 lg:h-72 lg:w-72">
+          <div className="absolute h-56 w-56 rounded-md bg-[#64ffda] group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:transition group-hover:duration-300 group-hover:ease-in-out lg:h-72 lg:w-72" />
+          <div className="absolute left-3 top-3 h-56 w-56 rounded-md border-2 border-[#64ffda] group-hover:translate-x-1 group-hover:translate-y-1 group-hover:transition group-hover:duration-300 group-hover:ease-in-out lg:h-72 lg:w-72" />
+        </div>
+      </section>
       {/* WORKED */}
       <section className="py-24">
         <SectionHeader
@@ -152,7 +164,7 @@ export const Main = ({ isActive, setisActive }) => {
           view the archive
         </NavLink>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="grid gap-4 sm:grid-cols-2">
         <SmallCard />
         <SmallCard />
         <SmallCard />
@@ -161,16 +173,16 @@ export const Main = ({ isActive, setisActive }) => {
       <div className="flex w-full justify-center py-8">
         <Button text="Show More" link="/" />
       </div>
-      <div className="flex flex-col items-center justify-center gap-4 pb-20 pt-12 text-center">
+      <div className="flex w-full flex-col items-center justify-center gap-4 pb-20 pt-12 text-center">
         <h2 className="font-mono text-sm font-thin tracking-wider text-[#64ffda]">
           What's Next?
         </h2>
         <h2 className="text-4xl font-bold text-[#ccd6f6]">Get In Touch</h2>
-        <p className="text-sm text-[#a8b2d1]">
+        <p className="text-sm text-[#a8b2d1] sm:mx-auto sm:max-w-md sm:text-base">
           Although I’m not currently looking for any new opportunities, my inbox
           is always open.
         </p>
-        <p className="mb-8 text-sm text-[#a8b2d1]">
+        <p className="mb-8 text-sm text-[#a8b2d1] sm:mx-auto sm:max-w-md sm:text-base">
           Whether you have a question or just want to say hi, I’ll try my best
           to get back to you!
         </p>
