@@ -1,6 +1,6 @@
 export const Socials = () => {
   return (
-    <section className="flex w-full items-center justify-center gap-8">
+    <section className="flex w-full items-center justify-center gap-8 lg:hidden">
       {/* Github */}
       <svg
         width="20"

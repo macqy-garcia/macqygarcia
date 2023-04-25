@@ -35,7 +35,7 @@ export const Navbar = ({ isActive, setisActive }) => {
   ];
 
   return (
-    <nav className="fixed -top-7 left-0 hidden w-full items-center justify-between bg-[#0D192D]/50 backdrop-blur-sm backdrop-filter lg:flex lg:px-12 lg:py-3">
+    <nav className="fixed -top-7 left-0 z-50 hidden w-full items-center justify-between bg-[#0D192D]/50 backdrop-blur-sm backdrop-filter lg:flex lg:px-12 lg:py-3">
       <svg
         width="50"
         height="50"

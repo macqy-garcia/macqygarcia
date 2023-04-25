@@ -10,6 +10,7 @@ import { Socials } from "./Socials";
 import { Sidebar } from "./Sidebar";
 import { Navbar } from "./Navbar";
 import { Timeline } from "./Timeline";
+import { Footer } from "./Footer";
 
 export const Main = ({ isActive, setisActive }) => {
   return (
@@ -130,7 +131,7 @@ export const Main = ({ isActive, setisActive }) => {
                 May 2022 - Present
               </p>
             </div>
-            <ul className="flex flex-col gap-4 p-5 text-sm font-light">
+            <ul className="relative flex flex-col gap-4 p-5 text-sm font-light">
               <ListItem
                 text="Deliver high-quality, robust production code for a diverse array of
           projects for company and customer use such as inventory and selling system,
@@ -178,7 +179,7 @@ export const Main = ({ isActive, setisActive }) => {
           view the archive
         </NavLink>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:mx-auto lg:max-w-7xl lg:grid-cols-3">
         <SmallCard />
         <SmallCard />
         <SmallCard />
@@ -208,11 +209,12 @@ export const Main = ({ isActive, setisActive }) => {
         </button>
       </div>
       <footer className="flex w-full flex-col justify-center gap-5 pb-10 pt-16">
-        <Socials />
+        <Footer />
         <p className="text-center font-mono text-xs text-[#a8b2d1]">
           Designed By Brittany Chiang & Built by Macqy Garcia
         </p>
       </footer>
+      <Socials />
     </main>
   );
 };
