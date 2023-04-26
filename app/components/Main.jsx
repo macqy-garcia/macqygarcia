@@ -184,9 +184,9 @@ export const Main = ({ isActive, setisActive }) => {
           <SmallCard key={index} project={project} />
         ))}
       </div>
-      <div className="flex w-full justify-center py-8">
+      {/* <div className="flex w-full justify-center py-8">
         <Button text="Show More" link="/" />
-      </div>
+      </div> */}
       <div className="flex w-full flex-col items-center justify-center gap-4 pb-20 pt-12 text-center lg:gap-7">
         <h2 className="font-mono text-sm font-thin tracking-wider text-[#64ffda]">
           What's Next?
