@@ -2,7 +2,6 @@ import { SectionHeader } from "./SectionHeader";
 import { Tabs } from "./Tabs";
 import { Base } from "./Base";
 import { NavLink } from "@remix-run/react";
-import { ListItem } from "./ListItem";
 import { Card, SmallCard } from "./Card";
 import { Button } from "./Button";
 import { Header } from "./Header";
@@ -11,9 +10,12 @@ import { Sidebar } from "./Sidebar";
 import { Navbar } from "./Navbar";
 import { Timeline } from "./Timeline";
 import { Footer } from "./Footer";
-import { personalProjects, projects } from "../data";
+import { jobs, personalProjects, projects } from "../data";
+import { WorkItem } from "./WorkItem";
+import { useState } from "react";
 
 export const Main = ({ isActive, setisActive }) => {
+  const [currentJob, setCurrentJob] = useState(1);
   return (
     <main className="flex flex-col items-start space-y-7 bg-[#0D192D] px-7 sm:px-14">
       <Sidebar isActive={isActive} setisActive={setisActive} />
@@ -106,54 +108,30 @@ export const Main = ({ isActive, setisActive }) => {
         </div>
       </section>
       {/* WORKED */}
-      <section className="py-24 lg:mx-auto">
+      <section className="py-24 sm:w-full lg:mx-auto lg:max-w-2xl">
         <SectionHeader
           title="Where I've Worked"
           before="before:content-['02.']"
         />
-        <Tabs />
+        <Tabs
+          jobs={jobs}
+          currentJob={currentJob}
+          setCurrentJob={setCurrentJob}
+        />
         <div className="lg:mt-7 lg:flex lg:items-start lg:justify-between lg:gap-5">
-          <Timeline />
-          <div>
-            <div className="space-y-1 pt-2">
-              <h3>
-                <span className="text-xl text-[#ccd6f6]">
-                  Software Engineer
-                </span>
-                <span className="mx-1 text-[#64ffda]">@</span>
-                <NavLink
-                  to="https://joyride.com.ph/"
-                  className="mx-1 text-xl text-[#64ffda]"
-                >
-                  JoyRide PH
-                </NavLink>
-              </h3>
-              <p className="font-mono text-xs text-[#8892b0]">
-                May 2022 - Present
-              </p>
-            </div>
-            <ul className="relative flex flex-col gap-4 p-5 text-sm font-light">
-              <ListItem
-                text="Deliver high-quality, robust production code for a diverse array of
-          projects for company and customer use such as inventory and selling system,
-          mobile app using react native and an admin dashboard for the app"
-              />
-              <ListItem
-                text="Work alongside creative directors to lead the research, development,
-          and architecture of technical solutions to fulfill business
-          requirements"
-              />
-              <ListItem
-                text="Collaborate with designers, project managers, and other engineers to
-          transform creative concepts into production realities for clients and
-          stakeholders"
-              />
-              <ListItem
-                text="Provide leadership within engineering department through close
-          collaboration, knowledge shares, and mentorship"
-              />
-            </ul>
-          </div>
+          <Timeline
+            jobs={jobs}
+            currentJob={currentJob}
+            setCurrentJob={setCurrentJob}
+          />
+          {jobs.map((job) => (
+            <WorkItem
+              index={job.id}
+              job={job}
+              currentJob={currentJob}
+              setCurrentJob={setCurrentJob}
+            />
+          ))}
         </div>
       </section>
       {/* BUILT */}

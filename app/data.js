@@ -93,3 +93,67 @@ export const personalProjects = [
     prodUrl: "",
   },
 ];
+
+export const jobs = [
+  {
+    id: 1,
+    company: "JoyRide PH",
+    url: "/",
+    title: "Software Engineer",
+    dateRange: "May 2022 - Present",
+    descriptions: [
+      "Write modern, performant, and robust code for a diverse array of client and internal projects",
+      "Work with a variety of different languages, frameworks, and content management systems such as JavaScript, TypeScript, React, Remix JS, Next JS, Fastify, Express, etc.",
+      "Communicate and collaborate with multi-disciplinary teams of engineers, designers, producers, and stakeholders on a daily basis",
+    ],
+  },
+  {
+    id: 2,
+    company: "DILG PH",
+    url: "/dilg",
+    title: "Information System Analyst",
+    dateRange: "September 2015 - 2022",
+    descriptions: [
+      "Design visual imagery for websites and ensuring that they are in line with branding",
+      "Working with different content management systems such as graphCMS and Sanity",
+      "Communicating design ideas using user flows, process flows, site maps, and wireframes",
+      "Incorporating functionalities and features into websites",
+    ],
+  },
+  {
+    id: 3,
+    company: "Informatics",
+    url: "/informatics",
+    title: "Faculty Staff",
+    dateRange: "2014 - 2015",
+    descriptions: [
+      "Conducting research, fieldwork, and investigations, learn new technologies, and writing up reports",
+      "Teach web development technologies such as HTML, CSS, Javascript and other principles of programming",
+      "Developing curricula and delivering course material.",
+    ],
+  },
+  {
+    id: 4,
+    company: "APSAS",
+    url: "/apsas",
+    title: "Faculty Staff",
+    dateRange: "2014 - 2015",
+    descriptions: [
+      "Conducting research, fieldwork, and investigations, learn new technologies, and writing up reports",
+      "Teach web development technologies such as HTML, CSS, Javascript and other principles of programming",
+      "Developing curricula and delivering course material.",
+    ],
+  },
+  {
+    id: 5,
+    company: "AFILIATE",
+    url: "/afiliate",
+    title: "Faculty Staff",
+    dateRange: "2014 - 2015",
+    descriptions: [
+      "Conducting research, fieldwork, and investigations, learn new technologies, and writing up reports",
+      "Teach web development technologies such as HTML, CSS, Javascript and other principles of programming",
+      "Developing curricula and delivering course material.",
+    ],
+  },
+];

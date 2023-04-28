@@ -1,43 +1,22 @@
 import { NavLink } from "@remix-run/react";
 
-export const Tabs = () => {
-  const jobs = [
-    {
-      company: "JoyRide PH",
-      url: "/",
-    },
-    {
-      company: "DILG PH",
-      url: "/dilg",
-    },
-    {
-      company: "Informatics",
-      url: "/informatics",
-    },
-    {
-      company: "APSAS",
-      url: "/apsas",
-    },
-    {
-      company: "AFILIATE",
-      url: "/afiliate",
-    },
-  ];
+export const Tabs = ({ jobs, currentJob, setCurrentJob }) => {
   return (
-    <ul className="mb-7 flex w-80 overflow-x-scroll text-center font-mono text-xs font-medium text-gray-500 lg:hidden ">
+    <ul className="mb-7 flex w-80 overflow-x-scroll text-center font-mono text-xs font-medium text-gray-500 sm:w-full lg:hidden ">
       {jobs.map((job, index) => (
-        <NavLink
+        <li
           key={index}
-          to={job.url}
-          className={({ isActive }) =>
-            isActive
-              ? "active inline-block whitespace-nowrap rounded-t border-b-2 border-[#64ffda]  p-4 text-[#64ffda]"
-              : "inline-block whitespace-nowrap rounded-t p-4 hover:text-[#64ffda]" +
-                " hover:bg-blue-900/10"
+          onClick={() => setCurrentJob(job.id)}
+          className={`cursor-pointer hover:bg-blue-900/10
+          ${
+            currentJob === job.id
+              ? "active inline-block whitespace-nowrap rounded-t border-b-2 border-[#64ffda] p-4 text-[#64ffda]"
+              : "inline-block whitespace-nowrap rounded-t p-4 hover:text-[#64ffda]"
           }
+          `}
         >
           {job.company}
-        </NavLink>
+        </li>
       ))}
     </ul>
   );
