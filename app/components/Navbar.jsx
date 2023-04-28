@@ -1,5 +1,6 @@
 import { useEffect, useCallback } from "react";
 import { NavLink } from "@remix-run/react";
+import { links } from "../data";
 
 export const Navbar = ({ isActive, setisActive }) => {
   const escFunction = useCallback((event) => {
@@ -14,25 +15,6 @@ export const Navbar = ({ isActive, setisActive }) => {
       document.removeEventListener("keydown", escFunction, false);
     };
   }, [escFunction]);
-
-  const links = [
-    {
-      text: "About",
-      url: "/about",
-    },
-    {
-      text: "Experience",
-      url: "/experience",
-    },
-    {
-      text: "Work",
-      url: "/work",
-    },
-    {
-      text: "Contact",
-      url: "/contact",
-    },
-  ];
 
   return (
     <nav className="fixed -top-7 left-0 z-50 hidden w-full items-center justify-between bg-[#0D192D]/50 backdrop-blur-sm backdrop-filter lg:flex lg:px-12 lg:py-3">
@@ -64,12 +46,17 @@ export const Navbar = ({ isActive, setisActive }) => {
             key={link.text}
             className="flex cursor-pointer items-center justify-center gap-1 font-mono font-thin"
           >
-            <span className="text-xs tracking-widest text-[#64ffda]">
-              0{index + 1}.
-            </span>
-            <span className="text-xs font-thin tracking-widest text-[#ccd6f6] hover:text-[#64ffda]">
-              {link.text}
-            </span>
+            <a
+              className="transition-all duration-1000 ease-in-out"
+              href={`#${link.text.toLowerCase()}`}
+            >
+              <span className="text-xs tracking-widest text-[#64ffda]">
+                0{index + 1}.
+              </span>
+              <span className="text-xs font-thin tracking-widest text-[#ccd6f6] hover:text-[#64ffda]">
+                {link.text}
+              </span>
+            </a>
           </li>
         ))}
         <a

@@ -1,4 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
+import { useEffect, useCallback } from "react";
+import { links } from "../data";
 
 export const Sidebar = ({ isActive, setisActive }) => {
   const escFunction = useCallback((event) => {
@@ -13,25 +14,6 @@ export const Sidebar = ({ isActive, setisActive }) => {
       document.removeEventListener("keydown", escFunction, false);
     };
   }, [escFunction]);
-
-  const links = [
-    {
-      text: "About",
-      url: "/about",
-    },
-    {
-      text: "Experience",
-      url: "/experience",
-    },
-    {
-      text: "Work",
-      url: "/work",
-    },
-    {
-      text: "Contact",
-      url: "/contact",
-    },
-  ];
 
   return (
     <nav className="fixed left-0 top-0 z-20 flex w-full items-center justify-between bg-[#0D192D] p-7 transition duration-500 ease-in-out lg:hidden">
@@ -85,14 +67,20 @@ export const Sidebar = ({ isActive, setisActive }) => {
         {links.map((link, index) => (
           <li
             key={link.text}
+            onClick={() => setisActive(!isActive)}
             className="flex cursor-pointer flex-col items-center justify-center gap-1 font-mono font-thin"
           >
-            <span className="text-sm tracking-widest text-[#64ffda]">
-              0{index + 1}.
-            </span>
-            <span className="text-sm font-thin tracking-widest text-[#ccd6f6] hover:text-[#64ffda]">
-              {link.text}
-            </span>
+            <a
+              className="transition-all duration-1000 ease-in-out"
+              href={`#${link.text.toLowerCase()}`}
+            >
+              <span className="text-sm tracking-widest text-[#64ffda]">
+                0{index + 1}.
+              </span>
+              <span className="text-sm font-thin tracking-widest text-[#ccd6f6] hover:text-[#64ffda]">
+                {link.text}
+              </span>
+            </a>
           </li>
         ))}
         <a

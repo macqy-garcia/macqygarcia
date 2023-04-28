@@ -37,6 +37,7 @@ export const Main = ({ isActive, setisActive }) => {
         </div>
       </section>
       {/* ABOUT */}
+      <div id="about" className="pb-16" />
       <section className="w-full lg:mx-auto lg:flex lg:max-w-4xl lg:gap-10">
         <div className="lg:max-w-md">
           <SectionHeader title="About Me" before="before:content-['01.']" />
@@ -108,6 +109,7 @@ export const Main = ({ isActive, setisActive }) => {
         </div>
       </section>
       {/* WORKED */}
+      <div id="experience" className="pb-16" />
       <section className="py-24 sm:w-full lg:mx-auto lg:max-w-2xl">
         <SectionHeader
           title="Where I've Worked"
@@ -135,6 +137,7 @@ export const Main = ({ isActive, setisActive }) => {
         </div>
       </section>
       {/* BUILT */}
+      <div id="work" className="pb-16" />
       <section className="lg:mx-auto lg:max-w-5xl">
         <SectionHeader
           title="Some Things I’ve Built"
@@ -165,7 +168,11 @@ export const Main = ({ isActive, setisActive }) => {
       {/* <div className="flex w-full justify-center py-8">
         <Button text="Show More" link="/" />
       </div> */}
-      <div className="flex w-full flex-col items-center justify-center gap-4 pb-20 pt-12 text-center lg:gap-7">
+      {/* <div className="pb-16" /> */}
+      <div
+        id="contact"
+        className="flex w-full flex-col items-center justify-center gap-4 pb-20 pt-12 text-center lg:gap-7"
+      >
         <h2 className="font-mono text-sm font-thin tracking-wider text-[#64ffda]">
           What's Next?
         </h2>
@@ -184,7 +191,7 @@ export const Main = ({ isActive, setisActive }) => {
       <footer className="flex w-full flex-col justify-center gap-5 pb-10 pt-16">
         <Footer />
         <p className="text-center font-mono text-xs text-[#a8b2d1]">
-          Designed & Built by Macqy Garcia
+          Built with ❤️ by Macqy Garcia
         </p>
         <Socials />
       </footer>

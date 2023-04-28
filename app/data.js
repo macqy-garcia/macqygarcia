@@ -157,3 +157,22 @@ export const jobs = [
     ],
   },
 ];
+
+export const links = [
+  {
+    text: "About",
+    url: "/about",
+  },
+  {
+    text: "Experience",
+    url: "/experience",
+  },
+  {
+    text: "Work",
+    url: "/work",
+  },
+  {
+    text: "Contact",
+    url: "/contact",
+  },
+];

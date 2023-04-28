@@ -4,7 +4,6 @@ export const Timeline = ({ jobs, currentJob, setCurrentJob }) => {
       {jobs.map((job, index) => (
         <li
           key={index}
-          to={job.url}
           onClick={() => setCurrentJob(job.id)}
           className={`cursor-pointer hover:bg-blue-900/10 ${
             currentJob === job.id
