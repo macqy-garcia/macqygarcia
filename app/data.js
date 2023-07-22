@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Mobile Superapp",
     overview:
-      "Leading homegrown superapp in the Philippines offering on-demand services in ride-hailing, delivery, and e-commerce",
+      "Leading homegrown superapp in the Philippines offering on-demand services in ride-hailing, delivery, and e-commerce.",
     stack: "React Native Rematch Native Base",
     url: "https://onelink.to/letsjoyride",
   },
